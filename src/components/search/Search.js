@@ -7,7 +7,7 @@ function Search({onSearchChange}) {
     const [search, setSearch] = useState(null);
 
     const loadOptions = (inputValue) => {
-      return fetch (`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=1000000&namePrefix=${inputValue}`, 
+      return fetch (`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=100000&namePrefix=${inputValue}`, 
       geodbApiOptions)
       .then(response => response.json())
       .then(response => {
